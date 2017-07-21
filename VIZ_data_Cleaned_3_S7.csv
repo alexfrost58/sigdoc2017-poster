@@ -1,0 +1,112 @@
+subject,task,difference,type,click-id
+S6,1,0.20,instruction,none
+S6,1,0.06,instruction,none
+S6,1,0.03,click,click-Find-sidebar
+S6,1,0.58,comment,none
+S6,1,0.07,click,click-Find-Others
+S6,1,0.26,type,none
+S6,1,0.00,click,click-book-title
+S6,1,0.74,screen,none
+S6,1,0.12,click,click-worldcat-continue
+S6,1,0.25,screen,none
+S6,2,0.45,instruction,none
+S6,2,0.08,click,click-place-hold
+S6,2,0.08,type,none
+S6,2,0.07,type,none
+S6,2,0.31,type,none
+S6,2,0.19,screen,none
+S6,2,0.09,click,click-submit
+S6,2,0.21,click,click-confirm
+S6,2,0.05,click,click-ok
+S6,2,0.50,screen,none
+S6,3,0.17,comment,none
+S6,3,1.06,comment,none
+S6,3,0.07,instruction,none
+S6,3,1.12,comment,none
+S6,3,0.03,instruction,none
+S6,3,0.80,comment,none
+S6,3,0.15,instruction,none
+S6,3,0.16,click,back to home
+S6,3,0.03,click,click-find-sidebar
+S6,3,0.51,click,click-articles
+S6,3,0.06,click,click-all
+S6,3,0.09,screen,none
+S6,3,0.04,click,back to home
+S6,3,0.11,click,click-databases
+S6,3,0.09,type,"""accessibility"""
+S6,3,0.01,screen,none
+S6,3,0.04,click,back to home
+S6,3,0.48,click,click-database
+S6,3,0.02,type,"""accessibility"""
+S6,3,0.08,screen,none
+S6,3,0.01,click,click-catalog
+S6,3,0.42,type,"""accessibility"""
+S6,3,0.68,comment,none
+S6,3,0.18,screen,none
+S6,4,0.05,instruction,none
+S6,4,0.07,click,click-home
+S6,4,0.03,click,click-ask library
+S6,4,0.49,click,click-schedule
+S6,4,0.05,click,click-staff
+S6,4,0.02,click,click-date
+S6,4,0.01,click,click-time
+S6,4,0.11,type,type-name
+S6,4,0.07,click,type-email
+S6,4,0.07,click,click-confirm
+S6,4,0.82,comment,"""hardest thing is figure out what to search"""
+S6,5,0.05,instruction,none
+S6,5,0.25,click,click-home
+S6,5,0.02,click,click-students
+S6,5,0.61,click,click-mylibrarian
+S6,5,0.23,click,click-students
+S6,5,0.05,click,click-visitors
+S6,5,0.17,click,click-home
+S6,5,0.51,comment,Can't find a way inside the library website
+S6,5,0.11,screen,none
+S6,6,0.34,instruction,none
+S6,6,0.51,click,click-services
+S6,6,0.02,click,click-home
+S6,6,0.34,click,click-catalog
+S6,6,0.07,instruction,none
+S6,6,0.01,click,click-USERID
+S6,6,0.03,click,click-myaccount
+S6,6,0.01,click,click-holds
+S6,6,0.03,click,click-remove
+S6,6,0.01,click,click-yes
+S6,6,0.03,click,click-ok
+S6,6,0.54,screen,none
+S6,7,0.04,instruction,none
+S6,7,0.09,click,click-asksteely
+S6,7,0.12,click,click-schedule
+S6,7,0.05,click,click-home
+S6,7,0.13,click,click-services
+S6,7,0.51,comment,"""finding my account"""
+S6,7,0.09,click,click-students
+S6,7,0.15,click,click-myLibrarian
+S6,7,0.10,comment,"""not sure"""
+S6,7,0.07,screen,none
+S6,7,0.91,comment,"""more challenging"""
+S6,8,0.03,instruction,none
+S6,8,0.08,comment,"""catalog seems to be safest"""
+S6,8,0.01,type,vampire
+S6,8,0.49,click,click-search
+S6,8,0.09,click,click-dvd
+S6,8,0.21,screen,none
+S6,8,0.04,instruction,none
+S6,8,0.03,click,click-share
+S6,8,0.06,click,click-email
+S6,8,0.01,type,EMAIL
+S6,8,0.08,click,click-send
+S6,8,0.07,screen,none
+S6,8,0.75,comment,"""knowing catlog is safest"""
+S6,9,0.02,instruction,none
+S6,9,0.07,click,click-we-need-FB
+S6,9,0.61,screen,none
+S6,9,0.14,instruction,none
+S6,9,0.03,type,comment
+S6,9,0.20,type,CAPTCHA
+S6,9,0.01,type,comment
+S6,9,0.06,click,click-submit
+S6,9,0.05,screen,none
+S6,9,0.61,comment,The hit box is really small. Have to be close to the text. It's a little confusing
+,,,,
