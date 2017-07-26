@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Demos</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script src="https://d3js.org/d3-selection.v1.min.js"></script>
+      <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+  </head>
+  <body>
+    <svg width="1000" height="400" style="border: 1px solid">
+    </svg>
+      
+    <script>
+       (function(d3) {
+           'use strict';
+        
+        var x1, x2, y1, y2;
+           x1 = 0;
+           x2 = 0;
+           y1 = y2 = 200;
+           
+        var accumulatedData = 0;
+           
+        d3.csv('VIZdata2.csv', function(error, dataset) {           
+          dataset.forEach(function(d) {                             
+            d.difference = d.difference*100;                                 
+          }); 
+            
+        var xScale = d3.scaleLinear()
+                     .domain([0, 200000])
+                     .range([0, 1000]);
+
+        var drawcircles = d3.selectAll("svg")
+          .selectAll("circle")
+          .data(dataset)
+          .enter()
+          .append("circle")
+            //.attr("cx", function(d){return (d.difference+"px");})
+            .attr("cx", function(d, i){
+                return (d.difference+"px");})
+            .attr("cy", "200px")
+            .attr("r", "2px")
+            .style("stroke", "red")
+            .style("opacity", "0.5");
+            
+        drawcircles.attr("cx", function(d,i){    
+            accumulatedData = 0;
+            
+            var currentData = drawcircles.data()[i];
+            for (var j = i; j > 0; j--) {
+                currentData = drawcircles.data()[j];
+                accumulatedData += currentData.difference;  
+            }
+            return (accumulatedData+"px");});
+        
+            //return (currentData.difference + prevData.difference+"px");}) 
+            
+        var drawlines = d3.selectAll("svg")
+          .selectAll("line")
+          .data(dataset)
+          .enter()
+          .append("line")
+            .attr("x1", function(d, i){
+                return (d.difference+"px");})
+            .attr("x2", function(d, i){
+                return (d.difference+"px");})
+            .attr("y1", y1)
+            .attr("y2", y2)
+            .style("stroke", "blue")
+            .style("stroke-width", "1px")
+            .style("opacity", "0.5");
+            
+            /*
+            drawlines.attr("x2", function(d,i){    
+                var prevData = i>0?drawlines.data()[i-1]:drawlines.data()[drawlines.data().length-1];
+                
+                return (prevData.difference+"px");})
+            })
+            
+            */
+            drawlines.attr("x2", function(d,i){   
+                accumulatedData = 0;
+            
+                var currentData = drawlines.data()[i];
+                
+                for (var j = i-1; j > 0; j--) {
+                currentData = drawlines.data()[j];
+                accumulatedData += currentData.difference;  
+                }
+                
+               return (accumulatedData+"px");}); 
+            
+            drawlines.attr("x1", function(d,i){    
+                accumulatedData = 0;
+            
+                var currentData = drawlines.data()[i];
+                for (var j = i; j > 0; j--) {
+                currentData = drawlines.data()[j];
+                accumulatedData += currentData.difference;  
+                }
+                return (accumulatedData+"px");});   
+        
+
+            });
+    })(window.d3);
+           
+       
+    </script>
+      
+  </body>
+</html>
