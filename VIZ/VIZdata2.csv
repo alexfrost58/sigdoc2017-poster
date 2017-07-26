@@ -1,0 +1,195 @@
+Subject,task,difference,type,click-id
+S0,1,0.05,instruction,none
+S0,1,0.04,type,BOOKTITLE
+S0,1,0.01,click,click-go
+S0,1,0.30,click,click-booktitle
+S0,1,0.05,screen,none
+S0,2,0.03,instruction,none
+S0,2,0.05,click,click placehold
+S0,2,0.03,type,USERNAME
+S0,2,0.04,type,PASSWORD
+S0,2,0.01,click,click-signin
+S0,2,0.01,click,click-submit
+S0,2,0.01,click,click-close
+S0,2,0.05,screen,none
+S0,3,0.07,instruction,none
+S0,3,0.03,click,click-home
+S0,3,0.01,click,click-article
+S0,3,0.10,type,"""accessibility"""
+S0,3,0.30,click,click-TITLE
+S0,3,0.18,screen,none
+S0,4,0.05,instruction,none
+S0,4,0.01,click,click-home
+S0,4,0.01,click,click-ask
+S0,4,0.03,click,click-schedul
+S0,4,0.02,click,click-LIBRARIAN
+S0,4,0.01,click,click-date
+S0,4,0.06,click,click-time
+S0,4,0.05,type,NAME
+S0,4,0.05,type,EMAIL
+S0,4,0.01,click,click-confirm
+S0,4,0.05,screen,none
+S0,5,0.55,instruction,none
+S0,5,0.03,click ,click-USERID
+S0,5,0.01,click,click-USERID
+S0,5,0.06,click,click-myaccount
+S0,5,0.05,screen,none
+S0,6,0.01,instruction,none
+S0,6,0.02,click,click-hold
+S0,6,0.01,click,click-remove
+S0,6,0.02,click,click-yes
+S0,6,0.05,click,click-ok
+S0,6,0.10,screen,none
+S0,7,0.05,instruction,none
+S0,7,0.01,click,click-USERID
+S0,7,0.02,click,click-myAccount
+S0,7,0.04,screen,none
+S0,8,0.05,instruction,none
+S0,8,0.01,click,click-home
+S0,8,0.01,click,click-media
+S0,8,0.05,type,"""vampire"""
+S0,8,0.05,screen,none
+S0,8,0.05,instruction,
+S0,8,0.01,click,click-share
+S0,8,0.01,click,click-email
+S0,8,0.03,type,EMAIL
+S0,8,0.01,click,click-send
+S0,8,0.01,click,click-close
+S0,8,0.03,screen,none
+S0,9,0.04,instruction,none
+S0,9,0.01,click,click-home
+S0,9,0.01,click,click-shareFB
+S0,9,0.05,screen,none
+S0,9,0.03,instruction,none
+S0,9,0.04,type,NAME
+S0,9,0.10,type,COMMENT
+S0,9,0.02,type,CAPTCHA
+S0,9,0.01,click,click-submit
+S0,9,0.05,screen,none
+S7,1,0.1,instruction,none
+S7,1,0.04,instruction,none
+S7,1,0.01,click,click-serachBox
+S7,1,0.41,type,BOOK TITLE
+S7,1,0.06,click,click-go
+S7,1,0.1,click,click-booktitle
+S7,1,0.07,comment,none
+S7,1,0.03,comment,none
+S7,1,0.06,screen,none
+S7,2,0.06,instruction,hold
+S7,2,0.09,click,click-share
+S7,2,0.09,click,click-heldbyNKU
+S7,2,0.01,click,click-more
+S7,2,0.47,click,click-less
+S7,2,0.07,comment,"""not sure"""
+S7,2,0.06,click,click-placehold
+S7,2,0.03,type,click-USERNAME
+S7,2,0.01,type,click-PASSWORD
+S7,2,0.07,click,click-signin
+S7,2,0.07,click,click-submit
+S7,2,0.04,screen,none
+S7,2,0.06,comment,"""easy"""
+S7,2,1.03,screen,none
+S7,3,0.05,instruction,none
+S7,3,0.88,comment,none
+S7,3,0.1,instruction,none
+S7,3,0.67,comment,none
+S7,3,0.05,instruction,none
+S7,3,0.03,click,click-journals
+S7,3,0.04,type,"""accessibility"""
+S7,3,0.08,click,click-search
+S7,3,0.08,click,click-JOURNAL TITLE
+S7,3,0.54,click,click-fulltext
+S7,3,0.01,click,click-close
+S7,3,0.1,comment,"""not sure"""
+S7,3,0.12,click,click-JOURNAL TITLE
+S7,3,0.14,comment,"""not sure"""
+S7,3,0.63,comment,"""not expected"""
+S7,3,0.56,click,click-article
+S7,3,0.61,click,click-ARTICLE TITLE
+S7,3,0.13,screen,none
+S7,4,0.03,instruction,none
+S7,4,0.04,click,click-home
+S7,4,0.12,click,click-services
+S7,4,0.82,click,click-mylibrarian
+S7,4,0.06,click,click-schedule
+S7,4,0.03,click,click-date
+S7,4,0.06,click,click-time
+S7,4,0.02,type,NAME
+S7,4,0.07,type,EMAIL
+S7,4,0.5,type,"""Assignment"""
+S7,4,0.05,type,COURSE
+S7,4,0.05,click,click-comfirm
+S7,4,0.09,screen,none
+S7,4,0.33,comment,none
+S7,5,0.43,instruction,none
+S7,5,0.15,click,click-home
+S7,5,0.08,click,click-findbooks
+S7,5,0.07,click,click-home
+S7,5,0.03,click,click-quicklinkmores
+S7,5,0.07,click,click-less
+S7,5,0.76,type,BOOK TITLE
+S7,5,0.14,comment,Not seeing anything that says cancel.
+S7,5,0.26,comment,I thought there'd be a button that says cancel hold
+S7,6,0.46,instruction,none
+S7,6,0.02,click,click-USERID
+S7,6,0.05,click,click-myaccount
+S7,6,0.02,click,click-hold
+S7,6,0.02,click,click-remove
+S7,6,0.04,click,click-yes
+S7,6,0.05,screen,none
+S7,6,0.08,screen,none
+S7,7,0.08,instruction,none
+S7,7,0.01,click,click-USERID
+S7,7,0.08,click,click-mypersonal lists
+S7,7,0.08,click,click back
+S7,7,0.03,click,click-library links
+S7,7,0.42,click,click-home
+S7,7,0.03,click,click-mulibrarian
+S7,7,0.12,click,click-LIBRARIAN
+S7,7,0.07,click,click-schedule
+S7,7,0.07,click,click-calendars
+S7,7,0.08,click,click-home
+S7,7,0.08,hover,hover-sidebar
+S7,7,0.05,comment,"""not sure"""
+S7,7,0.52,click,click=mylibrarian
+S7,7,0.25,comment,If it was in my account I could have just cancelled it or if I go back to her account…It could say cancel
+S7,7,0.07,screen,none
+S7,7,0.86,comment,none
+S7,8,0.18,instruction,none
+S7,8,0.86,type,"""vampire"""
+S7,8,0.14,screen,none
+S7,8,0.05,instruction,none
+S7,8,0.01,click,click-share
+S7,8,0.06,click,click-email
+S7,8,0.08,type,EMAIL
+S7,8,0.46,click,click-send
+S7,8,0.05,click,click-share
+S7,8,0.01,click,click-email
+S7,8,0.05,type,EMAIL
+S7,8,0.01,click,click-send
+S7,8,0.03,click,click-share
+S7,8,0.02,click,click-email
+S7,8,0.06,type,EMAIL
+S7,8,0.02,click,click-send
+S7,8,0.04,screen,none
+S7,8,0.16,comment,"""easy"""
+S7,9,0.07,instruction,none
+S7,9,0.55,click,click-home
+S7,9,0.04,click,click-services
+S7,9,0.12,click,click-ask
+S7,9,0.23,click,click-students
+S7,9,0.07,click,click-about
+S7,9,0.54,comment,none
+S7,9,0.16,click,click-faculty
+S7,9,0.14,click,click-ask
+S7,9,0.08,click,click-email
+S7,9,0.08,screen,none
+S7,9,0.6,instruction,none
+S7,9,0.03,type,NAME
+S7,9,0.13,type,EMAIL
+S7,9,0.02,click,click-queston
+S7,9,0.89,type,QUESTION
+S7,9,0.07,type,CAPTCHA
+S7,9,0.08,click,click-submit
+S7,9,0.04,screen,none
+S7,9,0.01,comment, none
