@@ -51,7 +51,7 @@
                 
                 return (10+subjectNumber*10+"px");})
             .attr("r", "2px")
-            .style("stroke", "red")
+            .style("stroke", "black")
             .style("opacity", "0.5");
             
         drawcircles.attr("cx", function(d,i){    
@@ -89,7 +89,7 @@
                 .enter()
                 .append("path")
                   .attr("d", "M " + initialX + " " + initialY + " " + "q " + optimal/2 + " " + (optimal - difference)/optimal * 10 + " " + optimal + " 0")
-                  .style("stroke", "red")
+                  .style("stroke", "gray")
                   .style("stroke-width", "1")
                   .style("fill", "none")
                   .style("opacity", "0.5");
@@ -106,7 +106,7 @@
                 var prevSubject = prevData.Subject;
                 var prevSubjectNumber = +prevSubject.slice(1); 
 
-                difference = currentData.difference * 3;
+                difference = currentData.difference * 2; // assuming that it took twice longer than the optimal time
                 optimal = currentData.difference;
                 
                 if(subjectNumber === prevSubjectNumber) {
@@ -127,7 +127,7 @@
                 
                 initialY = 100+subjectNumber*10;
                 
-                return ("M " + initialX + " " + initialY + " " + "q " + optimal/2 + " " + (optimal - difference)/optimal * 100 + " " + optimal + " 0");
+                return ("M " + initialX + " " + initialY + " " + "q " +   ((-1) * optimal/2) + " " + (optimal - difference)/optimal * 100 + " " + ((-1) * optimal) + " 0");
                 
             });
         
