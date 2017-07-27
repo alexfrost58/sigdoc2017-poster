@@ -21,6 +21,7 @@
            y1 = y2 = 200;
            
         var accumulatedData = 0;
+        var newMark = 0;
            
         d3.csv('VIZdata2.csv', function(error, dataset) {           
           dataset.forEach(function(d) {                             
@@ -39,19 +40,37 @@
             //.attr("cx", function(d){return (d.difference+"px");})
             .attr("cx", function(d, i){
                 return (d.difference+"px");})
-            .attr("cy", "200px")
+            .attr("cy", function(d, i){
+                var subject = d.Subject;
+                var subjectNumber = +subject.slice(1); // remove "S" from S0 and turn it into number
+                
+                return (10+subjectNumber*10+"px");})
             .attr("r", "2px")
             .style("stroke", "red")
             .style("opacity", "0.5");
             
         drawcircles.attr("cx", function(d,i){    
             accumulatedData = 0;
-            
+      
             var currentData = drawcircles.data()[i];
-            for (var j = i; j > 0; j--) {
-                currentData = drawcircles.data()[j];
-                accumulatedData += currentData.difference;  
+            var prevData = i>0?drawcircles.data()[i-1]:drawcircles.data()[drawcircles.data().length-1];
+            
+            var subject = currentData.Subject;
+            var subjectNumber = +subject.slice(1); 
+            
+            var prevSubject = prevData.Subject;
+            var prevSubjectNumber = +prevSubject.slice(1); 
+            
+            if(subjectNumber === prevSubjectNumber) {
+               for (var j = i; j > newMark; j--) {
+                    currentData = drawcircles.data()[j];
+                    accumulatedData += currentData.difference;  
+                }
+            } else {
+                accumulatedData = 0;
+                newMark = i;
             }
+            
             return (accumulatedData+"px");});
         
             //return (currentData.difference + prevData.difference+"px");}) 
