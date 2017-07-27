@@ -22,6 +22,11 @@
            
         var accumulatedData = 0;
         var newMark = 0;
+         
+        var difference = 80; // for test
+        var optimal = 20;
+        var initialX = 100;
+        var initialY = 300;
            
         d3.csv('VIZdata2.csv', function(error, dataset) {           
           dataset.forEach(function(d) {                             
@@ -74,51 +79,57 @@
             return (accumulatedData+"px");});
         
             //return (currentData.difference + prevData.difference+"px");}) 
+          
+          // testing the curves, bezier : not perfect yet
+            var drawCurves = 
+                d3.select("svg")
+                //.selectAll("path")
+                .selectAll("path")
+                .data(dataset)
+                .enter()
+                .append("path")
+                  .attr("d", "M " + initialX + " " + initialY + " " + "q " + optimal/2 + " " + (optimal - difference)/optimal * 10 + " " + optimal + " 0")
+                  .style("stroke", "red")
+                  .style("stroke-width", "1")
+                  .style("fill", "none")
+                  .style("opacity", "0.5");
             
-        var drawlines = d3.selectAll("svg")
-          .selectAll("line")
-          .data(dataset)
-          .enter()
-          .append("line")
-            .attr("x1", function(d, i){
-                return (d.difference+"px");})
-            .attr("x2", function(d, i){
-                return (d.difference+"px");})
-            .attr("y1", y1)
-            .attr("y2", y2)
-            .style("stroke", "blue")
-            .style("stroke-width", "1px")
-            .style("opacity", "0.5");
-            
-            /*
-            drawlines.attr("x2", function(d,i){    
-                var prevData = i>0?drawlines.data()[i-1]:drawlines.data()[drawlines.data().length-1];
-                
-                return (prevData.difference+"px");})
-            })
-            
-            */
-            drawlines.attr("x2", function(d,i){   
+            drawCurves.attr("d", function(d, i) { // needs optimization
                 accumulatedData = 0;
             
-                var currentData = drawlines.data()[i];
+                var currentData = drawCurves.data()[i];
+                var prevData = i>0?drawCurves.data()[i-1]:drawCurves.data()[drawCurves.data().length-1];
+
+                var subject = currentData.Subject;
+                var subjectNumber = +subject.slice(1); 
+
+                var prevSubject = prevData.Subject;
+                var prevSubjectNumber = +prevSubject.slice(1); 
+
+                difference = currentData.difference * 3;
+                optimal = currentData.difference;
                 
-                for (var j = i-1; j > 0; j--) {
-                currentData = drawlines.data()[j];
-                accumulatedData += currentData.difference;  
+                if(subjectNumber === prevSubjectNumber) {
+
+                   for (var j = i; j > newMark; j--) {
+                        currentData = drawCurves.data()[j];
+                        accumulatedData += currentData.difference;  
+                    }
+                } else {
+                    accumulatedData = 0;
+                    newMark = i;
                 }
                 
-               return (accumulatedData+"px");}); 
-            
-            drawlines.attr("x1", function(d,i){    
-                accumulatedData = 0;
-            
-                var currentData = drawlines.data()[i];
-                for (var j = i; j > 0; j--) {
-                currentData = drawlines.data()[j];
-                accumulatedData += currentData.difference;  
-                }
-                return (accumulatedData+"px");});   
+                initialX = accumulatedData;
+                
+                var subject = d.Subject;
+                var subjectNumber = +subject.slice(1); 
+                
+                initialY = 100+subjectNumber*10;
+                
+                return ("M " + initialX + " " + initialY + " " + "q " + optimal/2 + " " + (optimal - difference)/optimal * 100 + " " + optimal + " 0");
+                
+            });
         
 
             });
